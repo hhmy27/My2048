@@ -1,2 +1,6 @@
 class Score:
-    pass
+    def __init__(self):
+        self.score = None
+
+    def readHistory(self):
+        pass
