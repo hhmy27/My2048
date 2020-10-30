@@ -17,7 +17,7 @@ class Game:
             flag = self.board_controller.moveBoard(key)
             if not flag:
                 break
-            self.board_controller.randomGenerate()
+            self.board_controller.randomGenerate(2 if flag > 2 else flag)
             self.board_controller.drawBoard()
 
         print("Game over")

@@ -10,11 +10,11 @@ class Board:
         # self.board = [[0, 0, 0, 0], [2, 2, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
         self.randomGenerate()
 
-    def randomGenerate(self):
+    def randomGenerate(self, num=2):
         # pick two grid let it have 2 or 4
         # 避免随机到两个数的情况
         cnt = 0
-        while cnt < 2:
+        while cnt < num:
             i, j, n = random.randint(0, self.size - 1), random.randint(0, self.size - 1), random.randint(1, 10)
             # 8:2 to generate 2 and 4
             n = 2 if n <= 8 else 4
@@ -79,11 +79,14 @@ class Board:
 
         move_algorithm()
 
-        if temp_board == self.board:
+        # if board after move equals board origin and no more place to generate num
+        zero_sum = sum([temp_board[i][j] == 0 for i in range(self.size) for j in range(self.size)])
+
+        if temp_board == self.board and zero_sum == 0:
             return False
 
         self.board = temp_board
-        return True
+        return zero_sum
 
 
 if __name__ == '__main__':
