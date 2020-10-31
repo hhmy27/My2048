@@ -1,6 +1,6 @@
 class InputFlow:
+
     def getKey(self):
-        # 上下左右
         direction = [0, 1, 2, 3]
         key = input()
         if key == 'w':
@@ -11,6 +11,8 @@ class InputFlow:
             return direction[2]
         elif key == 'd':
             return direction[3]
+        else:
+            return None
 
 
 if __name__ == '__main__':
