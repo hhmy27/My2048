@@ -3,13 +3,14 @@
 play 2048 in console
 
 - Python
-
-  Known bug:
-
-  - when input isn't w\s\a\d ，program will termination
+still writing
 
 - C
+  TODO
+
 - Java
-- Go
+  TODO
+
 - JavaScript
+  TODO
 
