@@ -18,7 +18,7 @@ class Game:
             if flag == -1:
                 break
             # add score
-            self.score_controller.score += flag if flag != None else 0
+            self.score_controller.cur_score += flag if flag != None else 0
             self.displayEvent()
         self.gameOverEvent()
 
